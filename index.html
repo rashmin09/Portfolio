@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/633622bc76.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div id="home"></div>
         <div class="header">
             <div class="logo">
                 <?xml version="1.0" encoding="utf-8"?>
@@ -743,32 +745,25 @@
             </div>
             <nav class="main-menu">
                 <ul>
-                    <li><a href="#index.html">Home</a></li>
-                    <li><a href="#aboutme.html">About Me</a></li>
-                    <li><a href="#portfolio.html">Portfolio</a></li>
-                    <li><a href="#contactme.html">Contact Me</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
 
-        <section id="home">
-            <p>Home</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+        <section>
+            <div id="welcome-message">
+                <h1>Welcome To My Portfolio!</h1>
+            </div>
+            <div class="button-container">
+                <a href="#aboutme" class="button1">Proceed</a>
+                <br>
+                <a href="#portfolio" class="button2">Straight To Portfolio</a>
+            </div>
         </section>
+
         <section id="aboutme">
             <div id="about">
                 <div class="container">
@@ -808,17 +803,16 @@
                     </div>
                 </div>
             </div>
-
             <script>
                 var skillsetlinks = document.getElementsByClassName("skillset-links");
                 var skillsetcontents = document.getElementsByClassName("skillset-contents");
 
                 function openskillset(skillset) {
                     for (skillsetlink of skillsetlinks) {
-                        skillsetlink.classList.remove("active-skillset")
+                        skillsetlink.classList.remove("active-skillset");
                     }
                     for (skillsetcontent of skillsetcontents) {
-                        skillsetcontent.classList.remove("active-skillset")
+                        skillsetcontent.classList.remove("active-skillset");
                     }
                     event.currentTarget.classList.add("active-skillset");
                     document.getElementById(skillset).classList.add("active-skillset");
@@ -827,21 +821,31 @@
         </section>
 
         <section id="portfolio">
-            <p>Portfolio</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <div class="portfolio">
+                <div class="container">
+                    <h1 class="sub-header">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="Images/work1.jpg">
+                        </div>
+                        <div class="work">
+                            <img src="Images/work2.jpg">
+                        </div>
+                        <div class="work">
+                            <img src="Images/work3.jpg">
+                        </div>
+                        <br>
+                        <div class="work">
+                            <img src="Images/work4.jpg">
+                        </div>
+                        <div class="work">
+                            <img src="Images/work5.jpg">
+                        </div>
+                        <div class="work">
+                            <img src="Images/work6.jpg">
+                        </div>
+                    </div>
+                </div>
         </section>
 
         <section id="contactme">
@@ -850,23 +854,41 @@
                     <div class="row">
                         <div class="contact-left">
                             <h1 class="sub-header">Contact Me</h1>
-                            <p>22035777@myrp.edu.sg</p>
-                            <p>+65 8721 5231</p>
+                            <br>
+                            <p><i class="fas fa-paper-plane"></i>22035777@myrp.edu.sg</p>
+                            <br>
+                            <p><i class="fas fa-phone-square-alt"></i>+65 8721 5231</p>
+                            <br>
+                            <div class="social-icons">
+                                <a><i class="fa-brands fa-facebook"></i></a>
+                                <a><i class="fa-brands fa-twitter-square"></i></a>
+                                <a><i class="fa-brands fa-instagram"></i></a>
+                                <a><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
                         </div>
                         <div class="contact-right">
                             <form>
+                                <br>
                                 <p>Full Name:</p>
                                 <input type="text" name="name" placeholder="Your Full Name" required>
                                 <p>Email Address:</p>
                                 <input type="email" name="email" placeholder="Your Email Address" required>
                                 <p>Message:</p>
                                 <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                                <button type="submit" class="btn">Send Message</button>
+                                <button type="submit" class="submit-btn">Send Message</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <video id="video" autoplay muted loop>
+            <source src="Videos/Space.mp4" type="video/mp4">
+        </video>
     </body>
 </html>
