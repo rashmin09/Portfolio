@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: gray;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000;
+}
+.logo {
+    width: 200px;
+    height: 100px;
+}
+.main-menu {
+    text-align: right;
+}
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.main-menu li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: rockwell;
+}
+h1 {
+    color: #fff;
+}
+#about {
+    padding: 80px;
+    color: #ababab;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 50px;
+}
+.about-col-2 {
+    flex-basis: 60%;
+}
+.sub-header {
+    font-size: 50px;
+    font-weight: 600px;
+    color: #fff;
+}
+.description {
+    font-size: 24px;
+    color: #fff;
+}
+.skillset {
+    display: flex;
+    margin: 20px 0 40px;
+    color: #fff;
+}
+.skillset-links {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.skillset-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.skillset-links.active-link::after {
+    width: 50%;
+}
+.skillset-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: #fff;
+}
+.skillset-contents ul li span{
+    color: #ffbf00;
+    font-size: 18px;
+    font-weight: bold;
+}
+.skillset-contents {
+    display: none;
+}
+.skillset-contents.active-skillset {
+    display: block;
+}
+.contact-left {
+    flex-basis: 20%;
+    margin-left: 125px;
+}
+.contact-right {
+    flex-basis: 50%;
+    margin-right: 125px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.contact-right form {
+    width: 500px;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.btn {
+    display: inline-block;
+    background-color: #ff004f;
+    border-radius: 6px;
+    width: 300px;
+    height: 50px;
+    margin-left: 110px;
+}
