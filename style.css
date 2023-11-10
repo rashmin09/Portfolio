@@ -56,7 +56,7 @@ h1 {
     overflow: hidden;
     white-space: nowrap;
     margin-top: 300px;
-    margin-left: 300px;
+    margin-left: 350px;
     margin-bottom: 50px;
     border-right: 2px solid #000;
     animation: typing 3s steps(80, end) infinite;
@@ -72,6 +72,9 @@ h1 {
     50% {
         border-right: none;
     }
+}
+.typing-animation {
+    animation: typing 2s infinite;
 }
 .button-container {
     text-align: center;
@@ -175,6 +178,72 @@ h1 {
 .skillset-contents.active-skillset {
     display: block;
 }
+.portfolio {
+    text-align: center;
+    background-color: transparent;
+    padding: 50px 0;
+    color: white;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.roww {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.work {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.work h2 {
+    margin-top: 10px;
+}
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    aspect-ratio: 1/1;
+    transition: transform 0.5s;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Background color with some transparency */
+}
+.work img:hover {
+    transform: translateY(-25px);
+}
+.work:hover .overlay-text {
+    opacity: 1;
+}
 .contact-left {
     flex-basis: 20%;
     margin-left: 125px;
@@ -233,26 +302,6 @@ form p {
     color: white;
     font-size:20px;
 }
-.typing-animation {
-    animation: typing 2s infinite;
-}
-#portfolio {
-    padding: 50px 0;
-    margin-left: 125px;
-}
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gaps: 40px;
-    margin-top: 50px;
-}
-.work {
-    border-radius: 15px;
+.image-container {
     position: relative;
-    overflow: hidden;
-}
-.work img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
 }
